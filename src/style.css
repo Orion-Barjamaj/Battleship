@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+    color: #DDDBF1;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+    font-family: BlackOpsFont;
+    src: url('./BlackOpsOne-Regular.ttf') format('truetype');
+}
+
+body{
+    background-color: #EEEEEE;
+}
+
+header{
+    font-family: 'BlackOpsFont';
+    font-size: 50px;
+    color: #373A40;
+}
+
+.theContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > div{
+    color: #373A40;
+}
+
+#Box{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    border: 1px solid black;
+}
+
+.cell{
+    z-index: 10;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+}
+
+.enemyCell:hover{
+    cursor: pointer;
+    background-color: #fffdaf;
+}
+
+.non-clickable{
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.nameContainer{
+    align-self: center;
+}
+
+h1{
+    color: #373A40;
+}
+
+.btnContainer{
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-right: 1102px;
+    width: 500px;
+    height: 50px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
+}
+
+.manually{
+    grid-row: 1 / span 2;
+    font-size: 30px;
+}
+
+#Btn{
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 15px;
+    outline:none;
+    border: none;
+    color: #EEEEEE;
+    background-color: #373A40;
+    transition: .5s;
+}
+
+#Btn:hover{
+    cursor: pointer;
+    background-color: #686D76; 
+}
+
+#Btn:disabled{
+    background-color: grey; 
+    cursor: not-allowed;
+}
+
+.whoWon{
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 40px;
+    width: 800px;
+    text-align: center;
+}
+
+.axis{
+    font-size: 20px;
+}
+
+#admiralName{
+    outline: none;
+    height: 40px;
+    border: 0px solid;
+    font-weight: bold;
+    font-size: 40px;
+    width: auto;
+    min-width: 50px;
+    color: #373A40;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+.playerName{
+    color: #373A40;
+}
+
+.play{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 15px;
+    font-weight: bold;
+    width: 250px;
+    height: 70px;
+    border: none;
+    color: #EEEEEE;
+    background-color: #DC5F00; 
+}
+
+.names{
+    width: 600px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status{
+    font-size: 20px;
+    color: #373A40;
+}
+
+.endScreen {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.playAgain{
+    margin-top: 50px;
+    width: 300px;
+    height: 80px;
+    border-radius: 15px;
+    border: none;
+    background-color:#DC5F00;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+#playBtn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#playBtn:disabled{
+    cursor: not-allowed !important;
+    transform: scale(1) !important;
+    background-color: grey;
+}
